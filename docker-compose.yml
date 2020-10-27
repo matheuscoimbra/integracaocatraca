@@ -1,0 +1,17 @@
+version: '3.7'
+services:
+  catraca:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SERVER_PORT: 8083
+    ports:
+    - "8083:8083"
+    restart: always
+    networks:
+      - catraca_net
+
+
+networks:
+  catraca_net:
